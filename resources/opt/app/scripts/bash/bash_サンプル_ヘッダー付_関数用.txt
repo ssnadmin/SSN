@@ -1,0 +1,31 @@
+##################################################
+#関数名      :  XXXX_XXXXXX
+#説明        :  XXXXをYYYYする関数処理。
+#引数        :  引数又はオプションの説明
+#戻り値      :    0:正常
+#                 1:正常終了(スキップ)
+#               255:異常終了
+#作成者      :  フルネーム
+#修正履歴    :  YYYY/MM/DD(初回登録)
+##################################################
+function [関数名]() {
+
+  local [関数処理で使用する変数はすべて記載すること]
+  declare -a(A) [関数処理内で使用する配列変数又は(連想配列変数)はすべて記載]
+
+  # オプションを定義する場合のコーディング例
+  local OPT OPTIND OPTARG flg_f=false value_f flg_r=false
+  while getopts f:r OPT; do
+    case ${OPT} in
+      f)  flg_f=true ; value_f=${OPTARG};;  # オプション+引数指定Ver
+      r)  flg_r=true ;;                     # オプションしてのみVer
+      \?) com_writelog -i SSNSH0050E ${LINENO} "${OPT}" ; return ${EXIT_CODE_ABNORMAL} ;;
+    esac
+  done
+
+  * ここに関数処理を書く
+
+  return [戻り値]
+
+}
+

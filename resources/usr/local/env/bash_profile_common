@@ -1,0 +1,21 @@
+# .bash_profile
+. /usr/local/env/profile_common
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+
+export PATH
+export APP_ROUTE
+export SCRIPT_COMMON
+export SCRIPT_BASH
+export DATA_ROUTE
+export LOG_ROUTE
+export EXIT_CODE_NORMAL
+export EXIT_CODE_ABNORMAL
+export EXIT_CODE_BREAK
