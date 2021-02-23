@@ -1,19 +1,16 @@
 #!/bin/bash
 ##################################################
-#プログラム名:  XXXXXX.sh
-#説明        :  XXXXをYYYYする。
-#引数        :  引数又はオプションの説明
-#戻り値      :    0:正常
-#                 1:正常終了(スキップ)
-#               255:異常終了
-#作成者      :  フルネーム
-#修正履歴    :  YYYY/MM/DD(初回登録)
+# プログラム名:  XXXXXX.sh
+# 説明        :  XXXXをYYYYする。
+# 引数        :  引数又はオプションの説明
+# 戻り値      :    0:正常
+#                  1:正常終了(スキップ)
+#                255:異常終了
+# 作成者      :  フルネーム
+# 修正履歴    :  YYYY/MM/DD(初回登録)
 ##################################################
 ## 初期設定
-. ${SCRIPT_BASH}/common.conf
-. ${SCRIPT_BASH}/message.conf
 . ${SCRIPT_BASH}/com_utilities.sh
-. ${SCRIPT_BASH}/com_logger.sh
 
 ## プロセス開始
 com_writelog -i SSNSH0001I ${LINENO}
